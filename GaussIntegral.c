@@ -1,9 +1,11 @@
 /*Gauss-integral*/
 
 #include <stdio.h>
+#define _USE_MATH_DEFINES
+
 #include <math.h>
 float f(float x){
-    return(exp(-x*x)); }
+    return(sqrt(x)); }
 int main(void)
 {
     int i,n;
@@ -26,3 +28,17 @@ int main(void)
     S*=(b-a)/2.0;
     printf("degree:%d, S=%f\n",n,S);
 }
+
+/*
+input degree:2
+degree:2, S=0.746595
+
+input degree:3
+degree:3, S=0.746815
+
+input degree:4
+degree:4, S=0.746825
+
+input degree:0
+degree:0, S=0.000000
+*/
